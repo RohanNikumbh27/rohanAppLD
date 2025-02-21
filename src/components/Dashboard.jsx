@@ -102,7 +102,7 @@ return (
     <CenteredContainer role={user.role}>
         <Container>
             <Title>Welcome, {user.email}</Title>
-            <Description>roleBasedAccess Flag is {roleBasedAccess ? "ON" : "OFF" }.</Description>
+            <Description>roleBasedAccess Flag is {roleBasedAccess?.includes("You are") ? "ON" : "OFF" }.</Description>
             <Description>{roleBasedAccess || "Access not defined"}</Description>
             <LogoutButton onClick={handleLogout}>Logout</LogoutButton>
         </Container>

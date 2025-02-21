@@ -11,7 +11,7 @@ const LoginContainer = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(135deg, #6a11cb 0%, #8e44ad 25%, #3498db 50%, #2980b9 75%, #2575fc 100%);
 `;
 
 // Glassmorphic Card
@@ -30,21 +30,24 @@ const StyledCard = styled(Card)`
 // Styled Input
 const StyledInput = styled(Input)`
     height: 45px;
+    padding-left: 15px;
     border-radius: 8px;
     font-size: 16px;
+    font-weight: 600; /* Make font bold */
     background-color: rgba(255, 255, 255, 0.2);
-    color: #ecf0f1;
+    color: #222;
     border: none;
     transition: 0.3s ease-in-out;
     
     &:focus {
         border: 1px solid #3498db;
-        box-shadow: 0 0 8px rgba(52, 152, 219, 0.8);
+        box-shadow: 0 0 18px rgba(52, 152, 219, 0.8);
         background-color: rgba(255, 255, 255, 0.3);
     }
     
     &::placeholder {
-        color: #bdc3c7;
+        color: #444; /* Black color */
+        font-weight: 600; /* Make font bold */
     }
 `;
 
@@ -56,18 +59,19 @@ const StyledButton = styled(Button)`
     font-size: 16px;
     font-weight: bold;
     border-radius: 8px;
-    padding:5px;
-    padding-bottom:10px;
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    padding: 5px;
+    padding-bottom: 10px;
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Dark color */
     color: #ffffff;
     border: none;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-        background: linear-gradient(135deg, #2980b9, #3498db);
+        background: #111 !important; /* Dark color */
         transform: translateY(-2px);
-        box-shadow: 0 4px 10px rgba(52, 152, 219, 0.6);
+        box-shadow: 0 4px 10px rgba(44, 62, 80, 0.6); /* Dark color */
     }
+
 `;
 
 export default function Login({ setUser }) {

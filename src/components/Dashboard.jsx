@@ -30,6 +30,7 @@ const getContainerBackgroundColor = (role) => {
 };
 
 const Container = styled.div`
+    margin:20px;
     text-align: center;
     padding: 20px 40px;
     background: ${props => getContainerBackgroundColor(props.role)};
